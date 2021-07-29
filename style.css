@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins";
+
+}
+body {
+    background: #F0EBCC;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 1000px;
+    background:white;
+    max-width: 1000px;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.562);
+}
+.left {
+    position: relative;
+    background-color: #04009A;
+    padding: 40px;
+}
+.right {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+}
+/* <------Profile--------> */
+.profile{
+    position: relative;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    padding-bottom: 20px;
+    border-bottom:3px solid rgba(255, 255, 255, 0.233);
+}
+.imgbox{
+    position: relative;
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.imgbox img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile h2 {
+    color: white;
+    font-size:1.5em;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4em;
+
+}
+.profile h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+/*<----CONTTACT INFO----->*/
+.contactInfo{
+    padding-top:40px;
+}
+.title{
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom:20px;
+}
+.contactInfo ul{
+    position:relative;
+}
+.contactInfo ul li {
+    list-style-type: none;
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: 350;
+
+}
+.icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+.contactInfo ul li span,.contactInfo ul li span a {
+    color: white;
+}
+
+.contactInfo.education li {
+    margin-bottom:15px;
+}
+.contactInfo.education h5 {
+    color: #77ACF1;
+
+}
+.contactInfo.education h4 {
+   color: white;font-weight: 400;
+}
+/* <-----Interests------> */
+
+/* <-----Languages-----> */
+
+.contactInfo.language .percent {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: #a0a0a0a6;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    background:rgb(255, 255, 255);
+}
+
+/* <----Right Side----About-----> */
+.about {
+    margin-bottom: 50px;
+}
+.about:last-child {
+    margin-bottom: 0px;
+}
+.title2 {
+    color: #011aa7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+ p {
+     color: #333;
+ }
+ /* <----Work Experience ---->*/
+ .about .box {
+     display:flex;
+     flex-direction: row;
+     margin: 20px 0;
+ }
+  .about .box .year_company{
+      min-width: 150px;
+
+  }
+  .about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 500;
+  }
+  .about .box .text h4 {
+text-transform: uppercase;
+color: #77ACF1;
+font-size: 16px;
+margin-bottom: 10px;
+  }
+
+/* <----Skills ----> */
+.skills .box {
+    position: relative;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 7px;
+    background:#77acf17a;
+    display: block;
+    margin-top: 5px;
+}
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    background:#04009A;
+}
+/* <-----Projects------> */
+.projects .box h4 {
+    color:#77ACF1;
+    font-size:18px;
+    font-weight: 600;
+}
+.projects .box a {
+    text-decoration: none;
+    color: #555c5f;
+}
+/* <------Response-----> */
+@media (max-width:1000px) {
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+        width: 100vw;
+    }
+}
+@media (max-width:600px) {
+    .about .box {
+        flex-direction: column;
+    }
+    .about .box .year_company{
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+    .skills .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
